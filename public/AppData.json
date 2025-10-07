@@ -1,0 +1,326 @@
+[
+  {
+    "image": "../src/assets/photo-editor-pro.jpg",
+    "title": "Photo Editor Pro",
+    "companyName": "Creative Labs",
+    "id": 1,
+    "description": "Photo Editor Pro is an all-encompassing photo editing application tailored for both novice users and seasoned professionals seeking to elevate their creative output. This app boasts an extensive suite of advanced tools, including layer-based editing, AI-driven enhancements, precise color correction, and sophisticated retouching features that allow for detailed adjustments to every aspect of an image. Users can effortlessly crop, resize, add text overlays, and apply a vast array of filters and effects, with seamless integration for sharing directly to popular social media platforms. The app supports editing raw files, offers high-resolution exports, and includes an extensive library of tutorials to help users master its capabilities, making it an indispensable tool for crafting stunning visuals directly from your mobile device. Whether you're enhancing personal snapshots or designing professional-grade artwork, Photo Editor Pro delivers a versatile and powerful editing experience.",
+    "size": 85,
+    "reviews": 12450,
+    "ratingAvg": 4.5,
+    "downloads": "500K+",
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 450 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  },
+  {
+    "image": "../src/assets/Fitness-Tracker.jpg",
+    "title": "Fitness Tracker",
+    "companyName": "HealthTech Inc.",
+    "id": 2,
+    "description": "Fitness Tracker is your all-in-one companion designed to monitor and enhance your physical health and fitness journey with unparalleled ease. This app enables users to track a wide range of activities, including workouts, step counts, heart rate, and calorie intake, presented through intuitive graphs and comprehensive progress reports. It seamlessly integrates with a variety of wearable devices, offering personalized workout plans, engaging challenges, and timely reminders to keep you active. Additional features like detailed sleep analysis, nutritional tracking with meal logging, and community-based challenges provide a holistic approach to fitness. With its user-friendly interface and data-driven insights, Fitness Tracker empowers you to set goals, monitor achievements, and maintain motivation, making it an essential tool for anyone committed to a healthier lifestyle.",
+    "size": 45,
+    "reviews": 8900,
+    "ratingAvg": 4.2,
+    "downloads": "300K+",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3600 }
+    ]
+  },
+  {
+    "image": "../src/assets/Note-Master.jpg",
+    "title": "Note Master",
+    "companyName": "Productivity Solutions",
+    "id": 3,
+    "description": "Note Master is a highly versatile note-taking application crafted to help you organize your thoughts, ideas, and tasks with exceptional efficiency. It offers rich text formatting, voice-to-text transcription for hands-free note creation, the ability to insert images and sketches, and robust cloud synchronization to keep your notes accessible across all devices. Users can create dedicated notebooks, apply tags for quick searching, set reminders, and collaborate with others in real-time. The app enhances productivity with OCR technology for scanning and digitizing documents, plus export options to PDF or Word formats, making it an ideal choice for students, professionals, and anyone needing a sophisticated digital notebook to manage their daily workflow.",
+    "size": 30,
+    "reviews": 6700,
+    "ratingAvg": 4.0,
+    "downloads": "200K+",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 2650 }
+    ]
+  },
+  {
+    "image": "../src/assets/Music-Streamer.jpg",
+    "title": "Music Streamer",
+    "companyName": "SoundWave Inc.",
+    "id": 4,
+    "description": "Music Streamer opens the door to an expansive library of millions of songs, albums, and podcasts, delivering high-quality audio streaming with a rich user experience. It curates personalized playlists based on your listening habits, offers offline downloads for uninterrupted enjoyment, and supports collaborative playlist creation with friends or family. Discover new music through expertly curated recommendations, artist radios, and trending charts, while enjoying features like real-time lyrics display, customizable equalizer settings, and seamless integration with smart home devices. Whether you're commuting, working out, or relaxing, Music Streamer provides an immersive and tailored listening experience that caters to every music enthusiast's needs.",
+    "size": 60,
+    "reviews": 15000,
+    "ratingAvg": 4.7,
+    "downloads": "1M+",
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 8300 }
+    ]
+  },
+  {
+    "image": "../src/assets/budget-planner.jpeg",
+    "title": "Budget Planner",
+    "companyName": "Finance Guru",
+    "id": 5,
+    "description": "Budget Planner is an intuitive financial management tool designed to help users take control of their finances with confidence and ease. It provides customizable expense and income categories, automated bill reminders, and detailed financial reports with interactive charts to visualize spending patterns over time. The app supports bank account synchronization for real-time updates, debt tracking with repayment plans, and a variety of budgeting templates tailored to different lifestyles and financial goals. With end-to-end encryption for secure data handling and options to export reports, Budget Planner is a must-have for anyone looking to achieve financial stability and make well-informed monetary decisions.",
+    "size": 25,
+    "reviews": 4500,
+    "ratingAvg": 4.1,
+    "downloads": "150K+",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 1700 }
+    ]
+  },
+  {
+    "image": "../src/assets/EduTech-Corp.jpg",
+    "title": "Language Learner",
+    "companyName": "EduTech Corp",
+    "id": 6,
+    "description": "Language Learner is an immersive and interactive app crafted to teach new languages through engaging lessons, fun games, and realistic conversational practice. It covers essential vocabulary, grammar rules, pronunciation exercises, and cultural insights, with adaptive learning paths that adjust to your progress and skill level. The app includes advanced speech recognition for pronunciation practice, daily streaks to maintain motivation, and an offline mode for learning on the go. Supporting a wide range of languages, it’s perfect for travelers seeking to communicate abroad, students pursuing academic goals, or professionals aiming to expand their linguistic capabilities in a dynamic and supportive environment.",
+    "size": 70,
+    "reviews": 7800,
+    "ratingAvg": 4.3,
+    "downloads": "250K+",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 3100 }
+    ]
+  },
+  {
+    "image": "../src/assets/Organize-Now.jpg",
+    "title": "Task Manager",
+    "companyName": "Organize Now",
+    "id": 7,
+    "description": "Task Manager is a robust productivity app designed to streamline your task organization with an array of powerful features. It allows users to create detailed task lists with subtasks, set priorities, assign due dates, and establish recurring tasks for routine activities. The app includes customizable reminders, real-time collaboration tools for team projects, and the ability to attach files or add notes for context. With visual boards, calendar views, and cross-device synchronization, plus integration with email and external calendars, Task Manager transforms how you manage both personal and professional workflows with efficiency and clarity.",
+    "size": 20,
+    "reviews": 5600,
+    "ratingAvg": 4.0,
+    "downloads": "180K+",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 2100 }
+    ]
+  },
+  {
+    "image": "../src/assets/media-magic.jpeg",
+    "title": "Video Editor",
+    "companyName": "Media Magic",
+    "id": 8,
+    "description": "Video Editor is a highly intuitive app that empowers users to create professional-quality videos right from their mobile devices with minimal effort. It offers a full-featured timeline for precise editing, a variety of transitions and effects, text overlays, and the ability to integrate music from an extensive built-in library. Additional capabilities include speed adjustments, voiceover recording, green screen effects, and support for 4K video exports. Perfect for vloggers, social media influencers, or hobbyists, the app provides a user-friendly interface, detailed tutorials, and creative tools to simplify video production and bring your vision to life with stunning results.",
+    "size": 90,
+    "reviews": 9200,
+    "ratingAvg": 4.4,
+    "downloads": "400K+",
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1400 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3900 }
+    ]
+  },
+  {
+    "image": "../src/assets/Weather-Forecast.jpg",
+    "title": "Weather Forecast",
+    "companyName": "SkyNet Apps",
+    "id": 9,
+    "description": "Weather Forecast delivers precise, real-time weather updates through a sleek and intuitive interface designed for effortless navigation. It provides detailed hourly, daily, and weekly forecasts, including temperature ranges, precipitation probabilities, wind speeds, and UV index readings. The app enhances planning with interactive radar maps, timely severe weather alerts, and customizable home screen widgets. Featuring location-based tracking and comprehensive global coverage, Weather Forecast ensures you stay prepared for outdoor activities, travel, or daily routines with accurate and up-to-date meteorological information at your fingertips.",
+    "size": 35,
+    "reviews": 10500,
+    "ratingAvg": 4.2,
+    "downloads": "600K+",
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 4750 }
+    ]
+  },
+  {
+    "image": "../src/assets/Foodie-Labs.jpeg",
+    "title": "Recipe Book",
+    "companyName": "Foodie Labs",
+    "id": 10,
+    "description": "Recipe Book is a comprehensive culinary companion featuring an extensive collection of thousands of recipes, complete with detailed step-by-step instructions, comprehensive ingredient lists, and nutritional breakdowns. Users can search by cuisine type, dietary restrictions, or available ingredients, save their favorite recipes, and generate shopping lists with a single tap. The app enhances cooking with video tutorials, advanced meal planning tools, and a vibrant community section for sharing user-created recipes. Whether you're a novice cook experimenting in the kitchen or a seasoned chef looking to diversify your repertoire, Recipe Book offers an engaging and practical platform to explore new dishes and elevate your culinary skills.",
+    "size": 50,
+    "reviews": 7200,
+    "ratingAvg": 4.3,
+    "downloads": "220K+",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1100 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3050 }
+    ]
+  },
+  {
+    "image": "../src/assets/Meditation.jpeg",
+    "title": "Meditation Guide",
+    "companyName": "Zen Studios",
+    "id": 11,
+    "description": "Meditation Guide is a serene and effective app that offers a wide range of guided audio sessions aimed at promoting mindfulness, reducing stress, and enhancing focus, suitable for users of all experience levels. It features themed meditations such as sleep improvement, anxiety relief, gratitude practice, and deep relaxation, with customizable session durations and a selection of calming background sounds like rain or ocean waves. Users can track their meditation progress, set daily reminders to build a habit, and access expert-led tips to deepen their practice. With its tranquil design and offline accessibility, Meditation Guide serves as an essential tool for integrating mindfulness into your daily life and fostering long-term mental well-being.",
+    "size": 40,
+    "reviews": 6100,
+    "ratingAvg": 4.6,
+    "downloads": "200K+",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 2900 }
+    ]
+  },
+  {
+    "image": "../src/assets/WanderlustApps.jpeg",
+    "title": "Travel Planner",
+    "companyName": "Wanderlust Apps",
+    "id": 12,
+    "description": "Travel Planner is a comprehensive travel organization app that assists users in crafting detailed itineraries, exploring destination guides, and managing bookings for flights, hotels, and activities with seamless integration. It provides real-time updates on weather conditions, local events, and travel advisories, along with budget tracking to keep expenses in check. The app supports collaborative planning for group trips, offers offline maps for navigation without internet, and includes customizable packing lists tailored to your destination. Ideal for solo adventurers or travel groups, Travel Planner ensures a well-organized and enjoyable travel experience from start to finish.",
+    "size": 55,
+    "reviews": 8700,
+    "ratingAvg": 4.4,
+    "downloads": "350K+",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3700 }
+    ]
+  },
+  {
+    "image": "../src/assets/ebookreader.jpeg",
+    "title": "E-Book Reader",
+    "companyName": "LitShelf",
+    "id": 13,
+    "description": "E-Book Reader offers a delightful and customizable reading experience designed to cater to the needs of avid book lovers everywhere. It supports a wide range of formats including EPUB, PDF, and MOBI, with adjustable font sizes, multiple themes, and a soothing night mode to reduce eye strain during late-night reading. The app includes bookmarking, highlighting key passages, and an integrated dictionary for instant word lookups, alongside the ability to organize your digital library and sync across devices. With personalized book recommendations and offline access to your collection, E-Book Reader transforms your mobile device into a portable library for endless reading enjoyment.",
+    "size": 30,
+    "reviews": 5400,
+    "ratingAvg": 4.1,
+    "downloads": "180K+",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 2000 }
+    ]
+  },
+  {
+    "image": "../src/assets/Wellness-Hub.jpeg",
+    "title": "Fitness Yoga",
+    "companyName": "Wellness Hub",
+    "id": 14,
+    "description": "Fitness Yoga is a dynamic app that delivers guided yoga routines tailored to suit practitioners from beginners to advanced levels, focusing on enhancing strength, flexibility, and mental clarity. It features an extensive library of video classes, a comprehensive pose guide with proper alignment tips, and personalized plans based on your fitness goals. Additional offerings include breathing exercises, meditation sessions, and community challenges to keep you motivated. With offline access to content and live or pre-recorded sessions led by certified instructors, Fitness Yoga is the perfect companion for integrating yoga into your daily routine, whether at home, in a studio, or while traveling.",
+    "size": 65,
+    "reviews": 7600,
+    "ratingAvg": 4.5,
+    "downloads": "280K+",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3300 }
+    ]
+  },
+  {
+    "image": "../src/assets/Podcast-Player.jpeg",
+    "title": "Podcast Player",
+    "companyName": "AudioWave",
+    "id": 15,
+    "description": "Podcast Player is a versatile app that allows users to discover, subscribe, and enjoy a diverse range of podcasts with unparalleled convenience. It supports offline downloads, adjustable playback speeds, and personalized recommendations based on your listening preferences. The app includes episode transcripts for follow-along reading, sleep timers for nighttime listening, and the ability to create custom playlists or rate your favorite shows. With push notifications for new episodes and seamless synchronization across devices, Podcast Player is an essential tool for commuters, lifelong learners, or anyone seeking entertainment on the go.",
+    "size": 40,
+    "reviews": 8200,
+    "ratingAvg": 4.3,
+    "downloads": "300K+",
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 3400 }
+    ]
+  },
+  {
+    "image": "../src/assets/Habit-Tracker.jpeg",
+    "title": "Habit Tracker",
+    "companyName": "GrowthMind",
+    "id": 16,
+    "description": "Habit Tracker is an empowering app designed to help users build positive habits and overcome detrimental ones through consistent daily tracking and insightful feedback. It offers customizable goals with flexible schedules, detailed progress charts to visualize your journey, and a library of pre-set habits for inspiration. The app enhances motivation with journaling features, the option to connect with accountability partners, and calendar integration for seamless planning. Perfect for personal growth enthusiasts, Habit Tracker provides a structured yet adaptable platform to foster long-term behavior change and achieve your aspirations.",
+    "size": 25,
+    "reviews": 4900,
+    "ratingAvg": 4.2,
+    "downloads": "160K+",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 1900 }
+    ]
+  },
+  {
+    "image": "../src/assets/Sleep-Sounds.jpeg",
+    "title": "Sleep Sounds",
+    "companyName": "CalmVibes",
+    "id": 17,
+    "description": "Sleep Sounds is a tranquil app that offers a rich collection of soothing ambient noises, white noise variations, and nature-inspired sounds to promote better sleep and relaxation. Users can mix and match sounds to create personalized audio landscapes, set timers for automatic shutoff, and design custom playlists for bedtime routines. The app includes guided relaxation sessions, ASMR content for deeper calm, and background play functionality for uninterrupted rest. Tailored for insomniacs, stressed individuals, or anyone seeking peace, Sleep Sounds enhances sleep quality and creates a restful environment naturally.",
+    "size": 50,
+    "reviews": 6800,
+    "ratingAvg": 4.6,
+    "downloads": "250K+",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 3100 }
+    ]
+  },
+  {
+    "image": "../src/assets/News-Reader.jpeg",
+    "title": "News Reader",
+    "companyName": "InfoStream",
+    "id": 18,
+    "description": "News Reader is a dynamic app that aggregates the latest headlines and in-depth articles from a wide array of trusted sources worldwide, allowing users to customize feeds based on interests like politics, technology, sports, or entertainment. It offers offline reading capabilities, real-time notifications for breaking news, and concise article summaries for quick updates on the go. Additional features include a dark mode for night reading, bookmarking for later review, and easy sharing options across platforms. Keeping you informed and engaged with global events, News Reader is an indispensable tool for staying connected to the world around you.",
+    "size": 35,
+    "reviews": 9500,
+    "ratingAvg": 4.4,
+    "downloads": "400K+",
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1400 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 4050 }
+    ]
+  }
+]
