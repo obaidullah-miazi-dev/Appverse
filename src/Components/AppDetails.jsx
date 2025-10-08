@@ -8,6 +8,7 @@ import reviewicon from '../assets/icon-review.png'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Loader from './Loader';
 import AppNotFoundErrorPage from './AppNotFoundErrorPage';
+import { saveApp } from '../Utilities/LocalStorageFunc';
 
 const AppDetails = () => {
     const { id } = useParams()
@@ -64,7 +65,7 @@ const AppDetails = () => {
                         </div>
 
                         <div>
-                            <button className='cursor-pointer bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5'>Install Now <span>({singleApp.size} MB)</span></button>
+                            <button onClick={() => saveApp(singleApp)} className='cursor-pointer bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5'>Install Now <span>({singleApp.size} MB)</span></button>
                         </div>
 
                     </div>
