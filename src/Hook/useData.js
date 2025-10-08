@@ -9,12 +9,12 @@ const useData = () =>{
     useEffect(()=>{
         setLoading(true)
 
-        axios('../AppData.json')
-        .then(data => setAppData(data))
+        axios('/AppData.json')
+        .then(data => setAppData(data.data))
         .catch(err => setError(err))
         .finally(()=> setLoading(false))
     },[])
-
+    // console.log(appData);
     return {appData,loading,error}
 }
 

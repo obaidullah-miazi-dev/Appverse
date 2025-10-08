@@ -25,7 +25,7 @@ const Navbar = () => {
                         <NavLink to='/'>
                             <li className="hover:text-[#632EE3] hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Home</li>
                         </NavLink>
-                        <NavLink >
+                        <NavLink to='/allapp'>
                             <li className="hover:text-[#632EE3]  hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">App</li>
                         </NavLink>
                         <NavLink>
