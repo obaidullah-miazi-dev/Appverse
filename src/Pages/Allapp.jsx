@@ -5,12 +5,16 @@ import Container from '../Components/Container';
 
 const Allapp = () => {
     const data = useData()
-    const { appData } = data
+    const { appData, loading, error } = data
+    console.log(loading);
 
     const [search, setSearch] = useState('')
     const terms = search.trim().toLocaleLowerCase()
     const searchedApps = terms ? appData.filter(app => app.title.toLocaleLowerCase().includes(terms)) : appData
     // console.log(appData);
+    if (loading) return <Container><p>loading.........</p></Container>;
+    if (error) return <Container><p>app not found</p></Container>
+
     return (
         <>
             <Container>

@@ -7,7 +7,10 @@ import { NavLink } from 'react-router';
 
 const Home = () => {
     const data = useData()
-    const { appData } = data
+    const { appData,loading,error } = data
+
+    if (loading) return <Container><p>loading.........</p></Container>;
+    if (error) return <Container><p>app not found</p></Container>
     // console.log(appData);
     const featuredApp = appData.slice(0, 8)
     // console.log(featuredApp);
