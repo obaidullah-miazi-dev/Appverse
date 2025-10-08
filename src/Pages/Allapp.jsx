@@ -3,6 +3,7 @@ import useData from '../Hook/useData';
 import AppCard from '../Components/AppCard';
 import Container from '../Components/Container';
 import Loader from '../Components/Loader';
+import AppNotFoundErrorPage from '../Components/AppNotFoundErrorPage';
 
 const Allapp = () => {
     const data = useData()
@@ -14,7 +15,8 @@ const Allapp = () => {
     const searchedApps = terms ? appData.filter(app => app.title.toLocaleLowerCase().includes(terms)) : appData
     // console.log(appData);
     if (loading) return <Container><Loader></Loader></Container>;
-    if (error) return <Container><p>app not found</p></Container>
+    if (error) return <Container><AppNotFoundErrorPage></AppNotFoundErrorPage></Container>
+
 
     return (
         <>
@@ -50,11 +52,15 @@ const Allapp = () => {
                 </div>
 
 
-                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12 mb-8 mt-8'>
-                    {
-                        searchedApps.map(app => <AppCard key={app.id} app={app}></AppCard>)
-                    }
-                </div>
+                {
+                    searchedApps.length === 0 ? <AppNotFoundErrorPage></AppNotFoundErrorPage>
+                        :
+                        <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12 mb-8 mt-8'>
+                            {
+                                searchedApps.map(app => <AppCard key={app.id} app={app}></AppCard>)
+                            }
+                        </div>
+                }
             </Container >
         </>
     );

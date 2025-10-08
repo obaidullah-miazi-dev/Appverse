@@ -7,6 +7,7 @@ import staricon from '../assets/icon-ratings.png'
 import reviewicon from '../assets/icon-review.png'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Loader from './Loader';
+import AppNotFoundErrorPage from './AppNotFoundErrorPage';
 
 const AppDetails = () => {
     const { id } = useParams()
@@ -14,7 +15,7 @@ const AppDetails = () => {
     const { appData,loading } = data
 
     const singleApp = appData.find(app => app.id === Number(id))
-    if (!singleApp) return <div><p>error</p></div>
+    if (!singleApp) return <div><AppNotFoundErrorPage></AppNotFoundErrorPage></div>
     if(loading) return <Loader></Loader>
 
 
