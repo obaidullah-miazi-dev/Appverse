@@ -22,7 +22,7 @@ const Allapp = () => {
                 </div>
 
 
-                <div className='flex justify-between items-center mt-24'>
+                <div className='flex sm:flex-row flex-col justify-between items-center mt-24 sm:space-y-0 space-y-5'>
                     <h2 className='text-3xl font-bold  '>All Apps <span className='text-lg text-gray-500'>({searchedApps.length}) Apps Found</span></h2>
 
 
