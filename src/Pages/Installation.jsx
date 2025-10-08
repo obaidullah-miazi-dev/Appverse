@@ -5,7 +5,19 @@ import Container from '../Components/Container';
 
 const Installation = () => {
 
-    const [installedApps, setInstalledApps] = useState(() => getApp())
+    const [installedApps, ] = useState(() => getApp())
+    const [sortApp, setSortApp] = useState('none')
+    const sortedAppList = (()=> {
+        if(sortApp === 'size-low'){
+            return [...installedApps].sort((a,b) => a.size - b.size)
+        }
+        else if(sortApp === 'size-high'){
+            return [...installedApps].sort((a,b) => b.size - a.size)
+        }
+        else{
+            return installedApps
+        }
+    })()
     console.log(installedApps);
     return (
         <div className='pb-30'>
@@ -18,16 +30,22 @@ const Installation = () => {
                 </div>
 
                 <div className='flex sm:flex-row flex-col justify-between items-center mt-24 sm:space-y-0 space-y-5'>
-                    <h2 className='text-3xl font-bold  '>Installed Apps <span className='text-lg text-gray-500'>({installedApps.length}) Apps Found</span></h2>
+                    <h2 className='md:text-3xl text-xl font-bold  '>Installed Apps <span className='md:text-lg text-sm text-gray-500'>({installedApps.length}) Apps Found</span></h2>
 
 
                     <div>
-                        <h1 className='btn'>sort</h1>
+                        <label className='form-control w-full max-w-xs'>
+                            <select className='select' onChange={(e) => setSortApp(e.target.value)}>
+                                <option value="none">Sort By Size</option>
+                                <option value="size-low">Low to High</option>
+                                <option value="size-high">High to Low</option>
+                            </select>
+                        </label>
                     </div>
 
                 </div>
                 {
-                    installedApps.map(app => <InstalledAppCard key={app.id} app={app}></InstalledAppCard>)
+                    sortedAppList.map(app => <InstalledAppCard key={app.id} app={app}></InstalledAppCard>)
                 }
             </Container>
         </div>

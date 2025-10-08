@@ -7,8 +7,8 @@ const InstalledAppCard = ({ app }) => {
     return (
         <>
             
-                <div className='flex gap-4 items-center bg-white rounded-xl my-5 p-5'>
-                    <div className='w-24'>
+                <div className='flex flex-col md:flex-row gap-4 items-center bg-white rounded-xl my-5 p-5'>
+                    <div className='md:w-24 w-full'>
                         <img src={image} alt={title} className='rounded-xl' />
                     </div>
 
@@ -25,7 +25,7 @@ const InstalledAppCard = ({ app }) => {
                                 <p>{ratingAvg}</p>
                             </div>
                             <div>
-                                <p>{size}</p>
+                                <p className='font-semibold text-gray-500'>{size} MB</p>
                             </div>
                         </div>
 
