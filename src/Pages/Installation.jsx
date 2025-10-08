@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { getApp } from '../Utilities/LocalStorageFunc';
 import InstalledAppCard from '../Components/InstalledAppCard';
 import Container from '../Components/Container';
+import AppNotFoundErrorPage from '../Components/AppNotFoundErrorPage';
 
 const Installation = () => {
 
-    const [installedApps, ] = useState(() => getApp())
+    const [installedApps, setInstalledApps ] = useState(() => getApp())
     const [sortApp, setSortApp] = useState('none')
     const sortedAppList = (()=> {
         if(sortApp === 'size-low'){
@@ -45,7 +46,10 @@ const Installation = () => {
 
                 </div>
                 {
-                    sortedAppList.map(app => <InstalledAppCard key={app.id} app={app}></InstalledAppCard>)
+                    sortedAppList.length === 0 ? (<AppNotFoundErrorPage></AppNotFoundErrorPage>)
+                    : 
+                    sortedAppList.map(app => <InstalledAppCard key={app.id} app={app} setInstalledApps={setInstalledApps}></InstalledAppCard>)
+                
                 }
             </Container>
         </div>

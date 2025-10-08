@@ -1,19 +1,28 @@
 import React from 'react';
 import downloadImg from '../assets/icon-downloads.png'
 import staricon from '../assets/icon-ratings.png'
+import { removeApp } from '../Utilities/LocalStorageFunc';
 
-const InstalledAppCard = ({ app }) => {
-    const { image, title, ratingAvg, downloads, size } = app
+const InstalledAppCard = ({ app, setInstalledApps }) => {
+    const { image, title, ratingAvg, downloads, size, id } = app
+
+    const unistallApp = (id) => {
+        removeApp(id)
+        setInstalledApps(apps => apps.filter(a => a.id !== id))
+
+    }
+
     return (
         <>
-            
-                <div className='flex flex-col md:flex-row gap-4 items-center bg-white rounded-xl my-5 p-5'>
+
+            <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-white rounded-xl my-5 p-5'>
+                <div className='flex flex-col md:flex-row gap-4 items-start md:items-center'>
                     <div className='md:w-24 w-full'>
                         <img src={image} alt={title} className='rounded-xl' />
                     </div>
 
                     <div className='space-y-3'>
-                        <h2 className='text-xl font-bold'>{title}</h2>
+                        <h2 className='text-2xl md:text-xl font-bold'>{title}</h2>
 
                         <div className='flex justify-between items-center gap-8'>
                             <div className=' font-semibold text-green-500 rounded-md flex justify-between items-center gap-2'>
@@ -31,9 +40,14 @@ const InstalledAppCard = ({ app }) => {
 
                     </div>
                 </div>
-            
+
+                <div className='w-full md:w-28'>
+                    <button onClick={() => unistallApp(id)} className='cursor-pointer bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5 md:mt-0 w-full'>Unistall</button>
+                </div>
+            </div>
+
         </>
     );
-};
+}
 
 export default InstalledAppCard;
