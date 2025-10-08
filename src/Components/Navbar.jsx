@@ -22,13 +22,26 @@ const Navbar = () => {
                     </div>
 
                     <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-                        <NavLink to='/'>
+                        <NavLink to='/'
+                            className={({ isActive }) =>
+                                `${isActive ? "text-[#632EE3] border-b-2 border-[#632EE3]" : ""
+                                }`
+                            }>
                             <li className="hover:text-[#632EE3] hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Home</li>
                         </NavLink>
-                        <NavLink to='/allapp'>
+                        <NavLink to='/allapp'
+                            className={({ isActive }) =>
+                                `${isActive ? "text-[#632EE3] border-b-2 border-[#632EE3]" : ""
+                                }`
+                            }>
                             <li className="hover:text-[#632EE3]  hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">App</li>
                         </NavLink>
-                        <NavLink>
+                        <NavLink to='/installation' 
+                        className={({ isActive }) =>
+                                `${
+                                    isActive ? "text-[#632EE3] border-b-2 border-[#632EE3]" : ""
+                                }`
+                            }>
                             <li className="hover:text-[#632EE3]  hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Installation</li>
                         </NavLink>
 
@@ -58,10 +71,10 @@ const Navbar = () => {
                             <NavLink to='/'>
                                 <li className="hover:text-amber-600 transition cursor-pointer">Home</li>
                             </NavLink>
-                            <NavLink to='/products'>
+                            <NavLink to='/allapp'>
                                 <li className="hover:text-amber-600 transition cursor-pointer">App</li>
                             </NavLink>
-                            <NavLink to='/wishlist'>
+                            <NavLink to='/installation'>
                                 <li className="hover:text-amber-600 transition cursor-pointer">Installation</li>
                             </NavLink>
 

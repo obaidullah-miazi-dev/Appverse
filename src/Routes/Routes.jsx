@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import Allapp from "../Pages/Allapp";
+import Installation from "../Pages/Installation";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path: '/allapp',
                 Component: Allapp
+            },
+            {
+                path:'/installation',
+                Component:Installation
             }
 
         ]
