@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useData from '../Hook/useData';
 import AppCard from '../Components/AppCard';
 import Container from '../Components/Container';
+import Loader from '../Components/Loader';
 
 const Allapp = () => {
     const data = useData()
@@ -12,7 +13,7 @@ const Allapp = () => {
     const terms = search.trim().toLocaleLowerCase()
     const searchedApps = terms ? appData.filter(app => app.title.toLocaleLowerCase().includes(terms)) : appData
     // console.log(appData);
-    if (loading) return <Container><p>loading.........</p></Container>;
+    if (loading) return <Container><Loader></Loader></Container>;
     if (error) return <Container><p>app not found</p></Container>
 
     return (

@@ -4,12 +4,13 @@ import useData from '../Hook/useData';
 import AppCard from '../Components/AppCard';
 import Container from '../Components/Container';
 import { NavLink } from 'react-router';
+import Loader from '../Components/Loader';
 
 const Home = () => {
     const data = useData()
     const { appData,loading,error } = data
 
-    if (loading) return <Container><p>loading.........</p></Container>;
+    if (loading) return <Container><Loader></Loader></Container>;
     if (error) return <Container><p>app not found</p></Container>
     // console.log(appData);
     const featuredApp = appData.slice(0, 8)

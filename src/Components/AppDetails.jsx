@@ -5,16 +5,18 @@ import Container from './Container';
 import downloadImg from '../assets/icon-downloads.png'
 import staricon from '../assets/icon-ratings.png'
 import reviewicon from '../assets/icon-review.png'
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Barcode } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import Loader from './Loader';
 
 const AppDetails = () => {
     const { id } = useParams()
     const data = useData()
-    const { appData } = data
+    const { appData,loading } = data
 
     const singleApp = appData.find(app => app.id === Number(id))
     if (!singleApp) return <div><p>error</p></div>
+    if(loading) return <Loader></Loader>
+
 
     const rating = singleApp.ratings
     // console.log(rating);
