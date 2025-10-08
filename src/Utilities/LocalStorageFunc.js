@@ -19,3 +19,15 @@ export const saveApp = (app) =>{
         console.log(err);
     }
 }
+
+export const removeApp = (id) =>{
+    const saveApp = getApp()
+
+    try{
+        const removeFromLs = saveApp.filter(app => app.id !== id)
+        localStorage.setItem('appList',JSON.stringify(removeFromLs))
+    }
+    catch(err){
+        console.log(err);
+    }
+}
