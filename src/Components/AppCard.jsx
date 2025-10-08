@@ -7,7 +7,7 @@ const AppCard = ({ app }) => {
     const { image, title, downloads, ratingAvg } = app
     return (
         <>
-            <div className='p-5 shadow-md rounded-xl space-y-5 cursor-pointer'>
+            <div className='p-5 shadow-md rounded-xl space-y-5 cursor-pointer bg-white'>
                 <img src={image} className='w-full rounded-xl mx-auto' alt={title} />
                 <h2 className='text-2xl font-bold'>{title}</h2>
                 <div className='flex justify-between items-center'>
