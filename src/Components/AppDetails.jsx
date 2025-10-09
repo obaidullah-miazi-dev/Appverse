@@ -8,7 +8,8 @@ import reviewicon from '../assets/icon-review.png'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Loader from './Loader';
 import AppNotFoundErrorPage from './AppNotFoundErrorPage';
-import { saveApp,getApp } from '../Utilities/LocalStorageFunc';
+import { saveApp, getApp } from '../Utilities/LocalStorageFunc';
+import Swal from 'sweetalert2';
 
 const AppDetails = () => {
     const { id } = useParams()
@@ -19,11 +20,11 @@ const AppDetails = () => {
 
     const singleApp = appData?.find(app => app.id === Number(id))
 
-    useEffect(()=>{
+    useEffect(() => {
         const savedAppInLs = getApp()
         const checkInstalled = savedAppInLs.some(app => app.id === Number(id))
         setDisabledBtn(checkInstalled)
-    },[id])
+    }, [id])
 
     if (loading) return <Loader></Loader>
     if (!singleApp) return <div><AppNotFoundErrorPage></AppNotFoundErrorPage></div>
@@ -35,6 +36,11 @@ const AppDetails = () => {
     const handleSaveApp = (singleApp) => {
         saveApp(singleApp)
         setDisabledBtn(true)
+        Swal.fire({
+            title: "App Installed Successfully",
+            text: `Enjoy our ${singleApp.title} App`,
+            icon: "success"
+        });
     }
 
 
@@ -81,7 +87,7 @@ const AppDetails = () => {
                         </div>
 
                         <div>
-                            <button disabled={disabledBtn} onClick={() => handleSaveApp(singleApp)} className={`bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5 ${disabledBtn?'bg-gray-600 cursor-not-allowed':'bg-[#00D390] cursor-pointer'}`}>{disabledBtn ? 'Installed' : `Install Now (${`${singleApp.size}`}) MB`}</button>
+                            <button disabled={disabledBtn} onClick={() => handleSaveApp(singleApp)} className={`bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5 ${disabledBtn ? 'bg-gray-600 cursor-not-allowed' : 'bg-[#00D390] cursor-pointer'}`}>{disabledBtn ? 'Installed' : `Install Now (${`${singleApp.size}`}) MB`}</button>
                         </div>
 
                     </div>

@@ -2,11 +2,32 @@ import React from 'react';
 import downloadImg from '../assets/icon-downloads.png'
 import staricon from '../assets/icon-ratings.png'
 import { removeApp } from '../Utilities/LocalStorageFunc';
+import Swal from 'sweetalert2';
 
 const MyInstallation = ({ app, setInstalledApps }) => {
     const { image, title, ratingAvg, downloads, size, id } = app
 
     const unistallApp = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you really want to uninstall this app?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#7B3FE4",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes",
+            cancelButtonText: "Cancel"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Uninstalled!",
+                    text: "The app has been successfully removed from your device.",
+                    icon: "success",
+                    confirmButtonColor: "#7B3FE4"
+                });
+            }
+        });
+
         removeApp(id)
         setInstalledApps(apps => apps.filter(a => a.id !== id))
 
