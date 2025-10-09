@@ -9,23 +9,11 @@ const MyInstallation = ({ app, setInstalledApps }) => {
 
     const unistallApp = (id) => {
         Swal.fire({
-            title: "Are you sure?",
-            text: "Do you really want to uninstall this app?",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#7B3FE4",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes",
-            cancelButtonText: "Cancel"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                    title: "Uninstalled!",
-                    text: "The app has been successfully removed from your device.",
-                    icon: "success",
-                    confirmButtonColor: "#7B3FE4"
-                });
-            }
+            position: "top-end",
+            icon: "success",
+            title: "Your App Unistalled Successfully",
+            showConfirmButton: false,
+            timer: 1500
         });
 
         removeApp(id)
