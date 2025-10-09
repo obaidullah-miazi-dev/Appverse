@@ -80,7 +80,8 @@ To deploy on Netlify, include a _redirects file inside public/ folder with this 
 
 
 📸 Preview
-([App Screenshot](/appverse-full-web-view.png))
+![Desktop View](./appverse-full-web-view.png)  
+
 
 🧑‍🏫 Author
 👤 Obaidullah Miazi
