@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useData from '../Hook/useData';
 import AppCard from '../Components/AppCard';
 import Container from '../Components/Container';
@@ -11,8 +11,22 @@ const Allapp = () => {
     console.log(loading);
 
     const [search, setSearch] = useState('')
-    const terms = search.trim().toLocaleLowerCase()
-    const searchedApps = terms ? appData.filter(app => app.title.toLocaleLowerCase().includes(terms)) : appData
+    const [searchLoading, setSearchLoading] = useState(false)
+    const [searchedData, setSearchedData] = useState(appData)
+
+    useEffect(() => {
+        setSearchLoading(true)
+        const loadingTimer = setTimeout(() => {
+            const terms = search.trim().toLocaleLowerCase()
+            const searchedApps = terms ? appData.filter(app => app.title.toLocaleLowerCase().includes(terms)) : appData
+            setSearchedData(searchedApps)
+            setSearchLoading(false)
+
+        }, 500);
+
+        return () => clearTimeout(loadingTimer)
+    }, [search,appData])
+
     // console.log(appData);
     if (loading) return <Container><Loader></Loader></Container>;
     if (error) return <Container><AppNotFoundErrorPage></AppNotFoundErrorPage></Container>
@@ -30,7 +44,7 @@ const Allapp = () => {
 
 
                 <div className='flex sm:flex-row flex-col justify-between items-center mt-24 sm:space-y-0 space-y-5'>
-                    <h2 className='text-3xl font-bold  '>All Apps <span className='text-lg text-gray-500'>({searchedApps.length}) Apps Found</span></h2>
+                    <h2 className='text-3xl font-bold  '>All Apps <span className='text-lg text-gray-500'>({searchedData.length}) Apps Found</span></h2>
 
 
                     <label className="input">
@@ -53,11 +67,12 @@ const Allapp = () => {
 
 
                 {
-                    searchedApps.length === 0 ? <AppNotFoundErrorPage></AppNotFoundErrorPage>
+                    searchLoading?(<Loader></Loader>):
+                    searchedData.length === 0 ? <AppNotFoundErrorPage></AppNotFoundErrorPage>
                         :
                         <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12 mb-8 mt-8'>
                             {
-                                searchedApps.map(app => <AppCard key={app.id} app={app}></AppCard>)
+                                searchedData.map(app => <AppCard key={app.id} app={app}></AppCard>)
                             }
                         </div>
                 }
