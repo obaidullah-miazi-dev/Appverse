@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { getApp } from '../Utilities/LocalStorageFunc';
-import InstalledAppCard from '../Components/InstalledAppCard';
 import Container from '../Components/Container';
 import { NavLink } from 'react-router';
+import MyInstallation from '../Components/MyInstallation';
 
 const Installation = () => {
 
@@ -56,7 +56,7 @@ const Installation = () => {
                         </NavLink>
                     </div>)
                         :
-                        sortedAppList.map(app => <InstalledAppCard key={app.id} app={app} setInstalledApps={setInstalledApps}></InstalledAppCard>)
+                        sortedAppList.map(app => <MyInstallation key={app.id} app={app} setInstalledApps={setInstalledApps}></MyInstallation>)
 
                 }
             </Container>

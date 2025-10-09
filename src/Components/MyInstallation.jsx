@@ -3,7 +3,7 @@ import downloadImg from '../assets/icon-downloads.png'
 import staricon from '../assets/icon-ratings.png'
 import { removeApp } from '../Utilities/LocalStorageFunc';
 
-const InstalledAppCard = ({ app, setInstalledApps }) => {
+const MyInstallation = ({ app, setInstalledApps }) => {
     const { image, title, ratingAvg, downloads, size, id } = app
 
     const unistallApp = (id) => {
@@ -50,4 +50,4 @@ const InstalledAppCard = ({ app, setInstalledApps }) => {
     );
 }
 
-export default InstalledAppCard;
+export default MyInstallation;
