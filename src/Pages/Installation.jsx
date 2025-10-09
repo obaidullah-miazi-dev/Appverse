@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { getApp } from '../Utilities/LocalStorageFunc';
 import InstalledAppCard from '../Components/InstalledAppCard';
 import Container from '../Components/Container';
-import AppNotFoundErrorPage from '../Components/AppNotFoundErrorPage';
+import { NavLink } from 'react-router';
 
 const Installation = () => {
 
-    const [installedApps, setInstalledApps ] = useState(() => getApp())
+    const [installedApps, setInstalledApps] = useState(() => getApp())
     const [sortApp, setSortApp] = useState('none')
-    const sortedAppList = (()=> {
-        if(sortApp === 'size-low'){
-            return [...installedApps].sort((a,b) => a.size - b.size)
+    const sortedAppList = (() => {
+        if (sortApp === 'size-low') {
+            return [...installedApps].sort((a, b) => a.downloads - b.downloads)
         }
-        else if(sortApp === 'size-high'){
-            return [...installedApps].sort((a,b) => b.size - a.size)
+        else if (sortApp === 'size-high') {
+            return [...installedApps].sort((a, b) => b.downloads - a.downloads)
         }
-        else{
+        else {
             return installedApps
         }
     })()
@@ -37,7 +37,7 @@ const Installation = () => {
                     <div>
                         <label className='form-control w-full max-w-xs'>
                             <select className='select' onChange={(e) => setSortApp(e.target.value)}>
-                                <option value="none">Sort By Size</option>
+                                <option value="none">Sort By Downloads</option>
                                 <option value="size-low">Low to High</option>
                                 <option value="size-high">High to Low</option>
                             </select>
@@ -46,10 +46,18 @@ const Installation = () => {
 
                 </div>
                 {
-                    sortedAppList.length === 0 ? (<AppNotFoundErrorPage></AppNotFoundErrorPage>)
-                    : 
-                    sortedAppList.map(app => <InstalledAppCard key={app.id} app={app} setInstalledApps={setInstalledApps}></InstalledAppCard>)
-                
+                    sortedAppList.length === 0 ? (<div className='text-center space-y-5 md:my-48 my-20'>
+                        <h1 className='md:text-7xl text-4xl font-bold'>No App Installed Yet</h1>
+                        <p className='font-semibold text-lg text-gray-500'>Please Download Any App </p>
+                        <NavLink to='/' className="flex justify-center items-center mb-5">
+                            <button className="px-5 py-2.5  rounded-md hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold">
+                                Go Back
+                            </button>
+                        </NavLink>
+                    </div>)
+                        :
+                        sortedAppList.map(app => <InstalledAppCard key={app.id} app={app} setInstalledApps={setInstalledApps}></InstalledAppCard>)
+
                 }
             </Container>
         </div>
