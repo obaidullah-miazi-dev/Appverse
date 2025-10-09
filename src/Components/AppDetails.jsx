@@ -67,7 +67,7 @@ const AppDetails = () => {
                                     <img src={downloadImg} alt="download icon" />
                                     <p>Downloads</p>
                                 </div>
-                                <h2 className='font-black text-4xl'>{singleApp.downloads}</h2>
+                                <h2 className='font-black text-4xl'>{singleApp.downloads}K+</h2>
                             </div>
                             <div>
                                 <div>

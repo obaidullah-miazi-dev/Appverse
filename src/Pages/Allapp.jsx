@@ -4,6 +4,7 @@ import AppCard from '../Components/AppCard';
 import Container from '../Components/Container';
 import Loader from '../Components/Loader';
 import AppNotFoundErrorPage from '../Components/AppNotFoundErrorPage';
+import { NavLink } from 'react-router';
 
 const Allapp = () => {
     const data = useData()
@@ -25,7 +26,7 @@ const Allapp = () => {
         }, 500);
 
         return () => clearTimeout(loadingTimer)
-    }, [search,appData])
+    }, [search, appData])
 
     // console.log(appData);
     if (loading) return <Container><Loader></Loader></Container>;
@@ -67,14 +68,24 @@ const Allapp = () => {
 
 
                 {
-                    searchLoading?(<Loader></Loader>):
-                    searchedData.length === 0 ? <AppNotFoundErrorPage></AppNotFoundErrorPage>
-                        :
-                        <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12 mb-8 mt-8'>
-                            {
-                                searchedData.map(app => <AppCard key={app.id} app={app}></AppCard>)
-                            }
-                        </div>
+                    searchLoading ? (<Loader></Loader>) :
+                        searchedData.length === 0 ? (
+                            <div className='text-center space-y-5 md:my-48 my-20'>
+                                <h1 className='md:text-7xl text-4xl font-bold'>No App Found</h1>
+                                <p className='font-semibold text-lg text-gray-500'>Please Search with Correct Name</p>
+                                <NavLink to='/' className="flex justify-center items-center mb-5">
+                                    <button className="px-5 py-2.5  rounded-md hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold">
+                                        Go Back
+                                    </button>
+                                </NavLink>
+                            </div>
+                        )
+                            :
+                            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12 mb-8 mt-8'>
+                                {
+                                    searchedData.map(app => <AppCard key={app.id} app={app}></AppCard>)
+                                }
+                            </div>
                 }
             </Container >
         </>

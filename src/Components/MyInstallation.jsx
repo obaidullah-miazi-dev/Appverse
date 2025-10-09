@@ -48,7 +48,7 @@ const MyInstallation = ({ app, setInstalledApps }) => {
                         <div className='flex justify-between items-center gap-8'>
                             <div className=' font-semibold text-green-500 rounded-md flex justify-between items-center gap-2'>
                                 <img src={downloadImg} alt="download icon" className='w-4 h-4' />
-                                <p>{downloads}</p>
+                                <p>{downloads}K+</p>
                             </div>
                             <div className='font-semibold  text-orange-500 rounded-md flex justify-between items-center gap-2'>
                                 <img src={staricon} alt="star icon" className='w-4 h-4' />
