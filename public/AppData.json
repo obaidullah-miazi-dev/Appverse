@@ -1,6 +1,6 @@
 [
   {
-    "image": "../src/assets/photo-editor-pro.jpg",
+    "image": "https://i.ibb.co.com/NgbPrWhR/photo-editor-pro.jpg",
     "title": "Photo Editor Pro",
     "companyName": "Creative Labs",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "../src/assets/Fitness-Tracker.jpg",
+    "image": "https://i.ibb.co.com/whb471Jt/Fitness-Tracker.jpg",
     "title": "Fitness Tracker",
     "companyName": "HealthTech Inc.",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "../src/assets/Note-Master.jpg",
+    "image": "https://i.ibb.co.com/gM7zK5Ph/Note-Master.jpg",
     "title": "Note Master",
     "companyName": "Productivity Solutions",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "../src/assets/Music-Streamer.jpg",
+    "image": "https://i.ibb.co.com/N2kqcLDH/Music-Streamer.jpg",
     "title": "Music Streamer",
     "companyName": "SoundWave Inc.",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "../src/assets/budget-planner.jpeg",
+    "image": "https://i.ibb.co.com/Dfb4dRdM/budget-planner.jpg",
     "title": "Budget Planner",
     "companyName": "Finance Guru",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "../src/assets/EduTech-Corp.jpg",
+    "image": "https://i.ibb.co.com/3y6VzPr0/Edu-Tech-Corp.jpg",
     "title": "Language Learner",
     "companyName": "EduTech Corp",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "../src/assets/Organize-Now.jpg",
+    "image": "https://i.ibb.co.com/qLg7cxHW/Organize-Now.jpg",
     "title": "Task Manager",
     "companyName": "Organize Now",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "../src/assets/media-magic.jpeg",
+    "image": "https://i.ibb.co.com/gFgfZpzt/media-magic.jpg",
     "title": "Video Editor",
     "companyName": "Media Magic",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "../src/assets/Weather-Forecast.jpg",
+    "image": "https://i.ibb.co.com/MD52hp1S/Weather-Forecast.jpg",
     "title": "Weather Forecast",
     "companyName": "SkyNet Apps",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "../src/assets/Foodie-Labs.jpeg",
+    "image": "https://i.ibb.co.com/4wB4yQFz/Foodie-Labs.jpg",
     "title": "Recipe Book",
     "companyName": "Foodie Labs",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "../src/assets/Meditation.jpeg",
+    "image": "https://i.ibb.co.com/KcMZFhpH/Meditation.jpg",
     "title": "Meditation Guide",
     "companyName": "Zen Studios",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "../src/assets/WanderlustApps.jpeg",
+    "image": "https://i.ibb.co.com/1Yd9wpz5/Wanderlust-Apps.jpg",
     "title": "Travel Planner",
     "companyName": "Wanderlust Apps",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "../src/assets/ebookreader.jpeg",
+    "image": "https://i.ibb.co.com/S4Rsp9Q5/ebookreader.jpg",
     "title": "E-Book Reader",
     "companyName": "LitShelf",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "../src/assets/Wellness-Hub.jpeg",
+    "image": "https://i.ibb.co.com/7xtJP22x/Wellness-Hub.jpg",
     "title": "Fitness Yoga",
     "companyName": "Wellness Hub",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "../src/assets/Podcast-Player.jpeg",
+    "image": "https://i.ibb.co.com/LXvjbWF4/Podcast-Player.jpg",
     "title": "Podcast Player",
     "companyName": "AudioWave",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "../src/assets/Habit-Tracker.jpeg",
+    "image": "https://i.ibb.co.com/WNdJb60s/Habit-Tracker.jpg",
     "title": "Habit Tracker",
     "companyName": "GrowthMind",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "../src/assets/Sleep-Sounds.jpeg",
+    "image": "https://i.ibb.co.com/Psm1YPLw/Sleep-Sounds.jpg",
     "title": "Sleep Sounds",
     "companyName": "CalmVibes",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "../src/assets/News-Reader.jpeg",
+    "image": "https://i.ibb.co.com/pr4zvJPG/News-Reader.jpg",
     "title": "News Reader",
     "companyName": "InfoStream",
     "id": 18,
