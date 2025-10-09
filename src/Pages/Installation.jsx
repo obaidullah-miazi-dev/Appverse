@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getApp } from '../Utilities/LocalStorageFunc';
 import Container from '../Components/Container';
 import { NavLink } from 'react-router';
 import MyInstallation from '../Components/MyInstallation';
+import Loader from '../Components/Loader';
 
 const Installation = () => {
 
     const [installedApps, setInstalledApps] = useState(() => getApp())
     const [sortApp, setSortApp] = useState('none')
+    const [loading,setLoading] = useState(false)
+
+    useEffect(()=>{
+        setLoading(true)
+        const loadingTimer = setTimeout(() => {
+            const myInstallation = getApp()
+            setInstalledApps(myInstallation) || [];
+            setLoading(false)
+        }, 500);
+        return () => clearTimeout(loadingTimer)
+    },[])
+
+    if(loading) return <Loader></Loader>
+
+
     const sortedAppList = (() => {
         if (sortApp === 'size-low') {
             return [...installedApps].sort((a, b) => a.downloads - b.downloads)
@@ -19,7 +35,9 @@ const Installation = () => {
             return installedApps
         }
     })()
-    console.log(installedApps);
+
+
+
     return (
         <div className='pb-96'>
             <Container>
