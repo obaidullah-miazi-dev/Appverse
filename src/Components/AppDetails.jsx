@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import useData from '../Hook/useData';
 import Container from './Container';
@@ -12,16 +12,29 @@ import { saveApp } from '../Utilities/LocalStorageFunc';
 
 const AppDetails = () => {
     const { id } = useParams()
-    const data = useData()
-    const { appData,loading } = data
+    const data = useData();
+    const { appData, loading, installStatus } = data
+    const [disabledBtn, setDisabledBtn] = useState(installStatus)
+    // console.log(setAppData);
 
     const singleApp = appData.find(app => app.id === Number(id))
     if (!singleApp) return <div><AppNotFoundErrorPage></AppNotFoundErrorPage></div>
-    if(loading) return <Loader></Loader>
+    if (loading) return <Loader></Loader>
 
 
     const rating = singleApp.ratings
     // console.log(rating);
+
+    const handleSaveApp = (singleApp) => {
+
+        if (singleApp.installStatus === false) {
+            singleApp.installStatus = true
+        }
+        saveApp(singleApp)
+        setDisabledBtn(true)
+    }
+
+
 
 
 
@@ -65,7 +78,7 @@ const AppDetails = () => {
                         </div>
 
                         <div>
-                            <button onClick={() => saveApp(singleApp)} className='cursor-pointer bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5'>Install Now <span>({singleApp.size} MB)</span></button>
+                            <button disabled={disabledBtn} onClick={() => handleSaveApp(singleApp)} className='cursor-pointer bg-[#00D390] py-2 px-5 rounded-md text-white font-semibold text-xl mt-5'>{disabledBtn ? 'Installed' : `Install Now (${`${singleApp.size}`}) MB`}</button>
                         </div>
 
                     </div>
@@ -79,22 +92,22 @@ const AppDetails = () => {
                             width={500}
                             height={300}
                             data={rating}
-                           
+
                         >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey="count" fill="#FF8811"  />
+                            <Bar dataKey="count" fill="#FF8811" />
 
                         </BarChart>
                     </ResponsiveContainer>
                 </div>
 
                 <div className='py-24'>
-                   <h2 className='text-3xl font-bold mb-5'>Description</h2>
-                   <p className='text-gray-500 text-xl'>{singleApp.description}</p>
+                    <h2 className='text-3xl font-bold mb-5'>Description</h2>
+                    <p className='text-gray-500 text-xl'>{singleApp.description}</p>
                 </div>
             </Container>
         </>
