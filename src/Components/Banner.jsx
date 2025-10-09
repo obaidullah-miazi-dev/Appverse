@@ -38,7 +38,7 @@ const Banner = () => {
                 <div className='text-center  bg-gradient-to-br from-[#632EE3] to-[#9F62F2] text-white md:py-20 py-12'>
                     <h2 className='md:text-5xl text-4xl font-bold md:mb-16 mb-8 px-5 md:px-0'>Trusted by Millions, Built for You</h2>
 
-                    <div className='md:flex space-y-6 justify-center items-center gap-48'>
+                    <div className='lg:flex space-y-6 justify-center items-center lg:gap-48'>
                         <div className='space-y-3'>
                             <p>Total Downloads</p>
                             <h3 className='md:text-6xl text-4xl font-bold'>29.6M</h3>

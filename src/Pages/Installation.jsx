@@ -21,7 +21,7 @@ const Installation = () => {
     })()
     console.log(installedApps);
     return (
-        <div className='pb-30'>
+        <div className='pb-96'>
             <Container>
                 <div className='text-center mt-16 space-y-4 mb-12'>
                     <h1 className='font-bold md:text-5xl text-4xl '>Your Installed Apps</h1>
