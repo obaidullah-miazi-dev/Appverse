@@ -13,8 +13,8 @@ import { saveApp,getApp } from '../Utilities/LocalStorageFunc';
 const AppDetails = () => {
     const { id } = useParams()
     const data = useData();
-    const { appData, loading, installStatus } = data
-    const [disabledBtn, setDisabledBtn] = useState(installStatus)
+    const { appData, loading } = data
+    const [disabledBtn, setDisabledBtn] = useState(false)
     // console.log(setAppData);
 
     const singleApp = appData?.find(app => app.id === Number(id))
