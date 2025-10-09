@@ -44,17 +44,17 @@ const AppDetails = () => {
     return (
         <>
             <Container>
-                <div className='flex justify-between items-center gap-8 mt-20 pb-8 border-b-2 border-gray-200'>
+                <div className='flex flex-col md:flex-row justify-between items-center gap-8 mt-20 pb-8 border-b-2 border-gray-200'>
                     <div className='w-80'>
                         <img src={singleApp.image} alt={singleApp.title} className='rounded-xl' />
                     </div>
 
 
-                    <div className='flex-2 space-y-3'>
+                    <div className='md:flex-2 space-y-3'>
                         <h2 className='md:text-4xl text-3xl font-bold'>{singleApp.title}</h2>
                         <p className='text-gray-500 border-b-2 border-gray-200 pb-4'>Developed by <span className='text-[#632EE3] font-semibold'>{singleApp.companyName}</span></p>
 
-                        <div className='flex items-center gap-16 mt-8'>
+                        <div className='flex flex-col md:flex-row md:items-center gap-16 mt-8'>
 
                             <div>
                                 <div>
@@ -110,7 +110,7 @@ const AppDetails = () => {
 
                 <div className='py-24'>
                     <h2 className='text-3xl font-bold mb-5'>Description</h2>
-                    <p className='text-gray-500 text-xl'>{singleApp.description}</p>
+                    <p className='text-gray-500 md:text-xl'>{singleApp.description}</p>
                 </div>
             </Container>
         </>
