@@ -51,7 +51,7 @@ const AppDetails = () => {
         <>
             <Container>
                 <div className='flex flex-col md:flex-row justify-between items-center gap-8 mt-20 pb-8 border-b-2 border-gray-200'>
-                    <div className='w-80'>
+                    <div className='w-80 px-5 md:px-0'>
                         <img src={singleApp.image} alt={singleApp.title} className='rounded-xl' />
                     </div>
 
@@ -98,18 +98,29 @@ const AppDetails = () => {
                     <h2 className='text-3xl my-8 font-bold'>Ratings</h2>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
-                            width={500}
-                            height={300}
+                            layout="vertical"
                             data={rating}
-
+                           
                         >
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Bar dataKey="count" fill="#FF8811" />
-
+                            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                            <XAxis type="number" domain={[0, "dataMax + 1000"]} />
+                            <YAxis
+                                dataKey="name"
+                                type="category"
+                                axisLine={false}
+                                tickLine={false}
+                                width={40}
+                            />
+                            <Tooltip
+                                cursor={{ fill: "rgba(255,165,0,0.1)" }}
+                                formatter={(value) => [`${value.toLocaleString()}`, "Reviews"]}
+                            />
+                            <Bar
+                                dataKey="count"
+                                fill="#ff9500"
+                                radius={[0, 2, 2, 0]}
+                                barSize={25}
+                            />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>
